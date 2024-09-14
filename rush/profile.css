@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Sans-serif;
+    height: 100vh;
+    background: radial-gradient(circle at center, #ff8e71, #f7f5f5);
+    background-size: cover;
+}
+
+.navcol {
+    background-color: hsl(12, 75%, 87%);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    color: #ff8e71;
+}
+
+.navtit {
+    list-style-type: none;
+    
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.link {
+    display: block;
+    padding: 24px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(148, 59, 24);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link:hover {
+    background-color: #fae9db;
+}
+
+.blog {
+    border: 1px solid rgb(253, 242, 242);
+    background-color: #f7997f;
+    border-radius: 30px;
+
+    width: 30%;
+    height: 80%;
+
+    margin: 50px;
+    margin-top: 50px;
+
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    display: grid;
+    position: relative;
+    z-index: 1;
+}
+
+.text {
+    align-self: end;
+}
+
+.image {
+    position: absolute; 
+    border: 1px solid rgb(253, 242, 242);
+    border-radius: 30px;
+    margin: 40px;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 350px; 
+    z-index: 2; 
+}
+
+.skillb {
+    display: flex;
+    border: 1px solid rgb(253, 242, 242);
+    background-color: #f7997f;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 60px;
+}
+
+.center-skill {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
