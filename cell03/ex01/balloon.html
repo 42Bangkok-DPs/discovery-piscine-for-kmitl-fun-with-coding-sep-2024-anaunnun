@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <title>backgroound</title>
+
+        <style>
+            body {
+                display: grid;
+                background-color: #FFFF;
+                
+            }
+
+            .ball {
+                background-color: red;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                transition: width 0.5s, height 0.5s;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ball" onclick="size()" onmouseover="yor()" onmouseout="maiyor()">
+            <script>
+                function size() {
+                    const element = document.querySelector('.ball');
+                    const size = parseInt(window.getComputedStyle(element).width);
+                   
+                    if(element.style.backgroundColor === 'red') {
+                        element.style.backgroundColor = 'blue';
+                    }else  if(element.style.backgroundColor === 'blue') {
+                        element.style.backgroundColor = 'green';
+                    }else  {
+                        element.style.backgroundColor = 'red';
+                    }      
+
+
+                    if(size < 420) {
+                        element.style.width = (size+ 10) + 'px';
+                        element.style.height = (size + 10) + 'px';
+                    } else {
+                        element.style.width = 200  + 'px';
+                        element.style.height = 200 + 'px';
+                    }
+                }
+
+                function yor() {
+                    const element = document.querySelector('.ball');
+                    const size = parseInt(window.getComputedStyle(element).width);
+                   
+                    if(size > 200) {
+                        element.style.width = (size-5) + 'px';
+                        element.style.height = (size-5) + 'px';
+                    } else {
+                        element.style.width = 200  + 'px';
+                        element.style.height = 200 + 'px';
+                    }
+                }
+
+                function maiyor() {
+                    const element = document.querySelector('.ball');
+                    const size = parseInt(window.getComputedStyle(element).width);
+                   
+                    if(size > 200) {
+                        element.style.width = (size+5) + 'px';
+                        element.style.height = (size+5) + 'px';
+                    } else {
+                        element.style.width = 200  + 'px';
+                        element.style.height = 200 + 'px';
+                    }
+                }
+            </script>
+
+        </div>
+    </body>
+</html>
